@@ -1,33 +1,25 @@
-/**
- * v0 by Vercel.
- * @see https://v0.dev/t/wSaRU5mODu8
- * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
- */
 
-import Link from "next/link"
-import {auth} from "@/auth"
-import { useSession } from 'next-auth/react';
-import { redirect } from 'next/navigation';
-import { NavigationMenu, NavigationMenuList, NavigationMenuLink } from "@/components/ui/navigation-menu"
-import { Input } from "@/components/ui/input"
-import { Button } from "@/components/ui/button"
-import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuItem } from "@/components/ui/dropdown-menu"
-import { Card, CardHeader, CardContent, CardTitle } from "@/components/ui/card"
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
-import ClientButton from "@/components/ui/clientButton"
 
-export default async  function Component() {
+import Link from 'next/link'
+import { auth } from '@/auth'
+import { useSession } from 'next-auth/react'
+import { redirect } from 'next/navigation'
+import { NavigationMenu, NavigationMenuList, NavigationMenuLink } from '@/components/ui/navigation-menu'
+import { Input } from '@/components/ui/input'
+import { Button } from '@/components/ui/button'
+import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuItem } from '@/components/ui/dropdown-menu'
+import { Card, CardHeader, CardContent, CardTitle } from '@/components/ui/card'
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar'
+import ClientButton from '@/components/ui/clientButton'
+
+export default async function Component() {
   const session = await auth()
-  let a=0;
-  if(session!=null){
-    a=1;
+  let a = 0;
+  if (session != null) {
+    a = 1;
   }
 
- 
-
-
   return (
-
     <div className="flex min-h-screen w-full flex-col bg-muted/40 ">
       <header className="sticky top-0 z-30 flex h-14 items-center gap-4 border-b bg-background px-4 sm:static sm:h-auto sm:border-0 sm:bg-transparent sm:px-6">
         <Link href="#" className="flex items-center gap-2 text-lg font-semibold" prefetch={false}>
@@ -60,9 +52,9 @@ export default async  function Component() {
         </div>
         <div className="flex items-center gap-2">
          
-          <Link href = {a<1?"/sign-in":"sign-out"} className='p-2'>
+          <Link href={a < 1 ? "/sign-in" : "/sign-out"} className='p-2'>
           {a}
-            <ClientButton a={a}/>
+            <ClientButton a={a} />
         </Link>
         </div>
         <DropdownMenu>
@@ -101,7 +93,7 @@ export default async  function Component() {
               <CardContent>
                 <div className="grid gap-2">
                   <div className="flex items-center gap-2 text-sm">
-                    <div className="bg-muted rounded-lg px-3 py-2">Hey there! How's it going?</div>
+                    <div className="bg-muted rounded-lg px-3 py-2">Hey there! How&apos;s it going?</div>
                     <div className="text-xs text-muted-foreground">2:30 PM</div>
                   </div>
                   <div className="flex items-center gap-2 text-sm justify-end">
@@ -117,7 +109,6 @@ export default async  function Component() {
               <CardHeader>
                 <div className="flex items-center gap-4">
                   <Avatar className="border w-10 h-10">
-                   
                     <AvatarFallback>SA</AvatarFallback>
                   </Avatar>
                   <div className="grid gap-1">
@@ -137,7 +128,7 @@ export default async  function Component() {
                   <div className="flex items-center gap-2 text-sm justify-end">
                     <div className="text-xs text-muted-foreground">3:47 PM</div>
                     <div className="bg-primary rounded-lg px-3 py-2 text-primary-foreground">
-                      Yes, I did. I'll get back to you with my feedback shortly.
+                      Yes, I did. I&apos;ll get back to you with my feedback shortly.
                     </div>
                   </div>
                 </div>
@@ -154,7 +145,7 @@ export default async  function Component() {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Ping's real-time collaboration features allow your team to work together seamlessly, no matter their
+                  Ping&apos;s real-time collaboration features allow your team to work together seamlessly, no matter their
                   location. Share documents, brainstorm ideas, and stay in sync with ease.
                 </p>
               </CardContent>
@@ -176,7 +167,7 @@ export default async  function Component() {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Ping's advanced analytics and reporting tools provide valuable insights to help your team make
+                  Ping&apos;s advanced analytics and reporting tools provide valuable insights to help your team make
                   data-driven decisions and optimize their workflows.
                 </p>
               </CardContent>
@@ -187,7 +178,7 @@ export default async  function Component() {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Ping's robust security protocols and scalable infrastructure ensure that your data and your team are
+                  Ping&apos;s robust security protocols and scalable infrastructure ensure that your data and your team are
                   always protected, no matter the size of your organization.
                 </p>
               </CardContent>
@@ -233,8 +224,8 @@ function XIcon(props) {
       strokeLinecap="round"
       strokeLinejoin="round"
     >
-      <path d="M18 6 6 18" />
-      <path d="m6 6 12 12" />
+      <line x1="18" y1="6" x2="6" y2="18" />
+      <line x1="6" y1="6" x2="18" y2="18" />
     </svg>
   )
 }

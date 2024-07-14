@@ -10,7 +10,7 @@ const WebSocketComponent = ({ name }: { name: string }) => {
   const [ws, setWs] = useState<WebSocket | null>(null);
 
   useEffect(() => {
-    const webSocket = new WebSocket(`ws://localhost:8080?name=${name}`);
+    const webSocket = new WebSocket(`wss://ping-app-3bb7.onrender.com?name=${name}`);
 
     webSocket.onopen = () => {
       setConnectionStatus('Connected');
