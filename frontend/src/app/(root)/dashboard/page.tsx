@@ -89,7 +89,7 @@ export default function Home() {
             <div className="flex items-start gap-4 justify-end">
               <div className="bg-primary rounded-lg p-4 max-w-[80%] text-primary-foreground">
                 <div className="font-medium">You</div>
-                <div>Sure, I'm here!</div>
+                <div>Sure, I&apos;m here!</div>
                 <div className="text-xs text-primary-foreground mt-2">1 minute ago</div>
               </div>
               <Avatar className="w-10 h-10">
