@@ -9,9 +9,7 @@ import { auth } from "./auth";
 
 
 export default auth((req) => {
-    // const isLoggedIn=!!req.auth;
-    // 
-    // console.log("isLoggedIn : " ,isLoggedIn);
+    
 
     const {nextUrl} = req;
     const isLoggedIn=!!req.auth;
